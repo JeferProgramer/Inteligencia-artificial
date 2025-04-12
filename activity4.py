@@ -4,7 +4,6 @@ import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 
-#Empieza Ley
 class UnsupervisedRouteSystem:
     def __init__(self):
         self.graph = nx.Graph()
@@ -22,8 +21,6 @@ class UnsupervisedRouteSystem:
             self.graph.add_edge(
                 origin, dest, distance=distance, time=time, route_name=route_name
             )
-    #Acaba Ley
-    #Empeza jef
     def load_data(self, csv_path):
         df = pd.read_csv(csv_path)
 
@@ -70,8 +67,6 @@ class UnsupervisedRouteSystem:
         print(
             f"Routes grouped into {n_clusters} clusters based on distance and time patterns"
         )
-    #Acaba jef
-    #Empieza Mile
     def find_route(self, start, end):
         route = nx.shortest_path(self.graph, start, end, weight="time")
         return route if len(route) - 1 <= self.max_transfers else []
@@ -104,8 +99,6 @@ class UnsupervisedRouteSystem:
             "route_names": route_names,
             "clusters": clusters,
         }
-    #Acaba Mile
-    #Empieza Jef
 system = UnsupervisedRouteSystem()
 csv_path = "Rutas_Troncales_de_TRANSMILENIO.csv"
 df = system.load_data(csv_path)
@@ -127,4 +120,3 @@ for i in range(len(details["route"]) - 1):
 
 print(f"\nTotal distance: {details['distance']:.2f} km")
 print(f"Estimated time: {details['time']:.1f} minutes")
-#Acaba Jef
