@@ -1,6 +1,6 @@
 # Soluciones Actividades 3 y 4 - Aprendizaje Automático
 
-Este repositorio contiene las soluciones a las siguientes actividades del curso de Aprendizaje Automático:
+Este repositorio contiene las soluciones a las siguientes actividades del curso:
 
 ## Actividades
 
