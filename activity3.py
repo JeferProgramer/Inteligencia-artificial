@@ -8,7 +8,7 @@ class MLRouteSystem:
     def __init__(self):
         self.graph = nx.Graph()
         self.max_transfers = 2
-        self.max_time = 120
+        self.max_time = 200
         self.model = None
 
     def add_station(self, name, coords=(0, 0)):
